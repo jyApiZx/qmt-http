@@ -1,5 +1,11 @@
 # qmt-http
 
+# 通达信/同花顺纯协议接口
+
+**提供通达信/同花顺纯协议接口，支持大部分券商。接入请联系 Telegram：`JyApi888`。**
+
+完整函数表和各语言示例见 [stockapi](https://github.com/jyApiZx/stockapi)。
+
 大 QMT 内置策略常常不能读写外部文件，系统环境变量也读不到。配置、股票池、买卖信号和日志改走 HTTP，策略里只保留地址和 token 两个常量。
 
 调用形式与大 QMT 里常见的 HTTP 取数一致：向 `http://主机:端口/tq?token=...` 发送
@@ -8,7 +14,7 @@
 {"method": "接口名", "params": {}}
 ```
 
-MiniQMT 已不可用，本仓库不依赖 xtquant。交易和 L2 行情（十档、逐笔成交、逐笔委托）见 [stockapi](https://github.com/jyApiZx/stockapi)。`Api.dll` 支持大部分券商。接入请联系 Telegram：`JyApi888`。
+MiniQMT 已不可用，本仓库不依赖 xtquant。交易和 L2 行情（十档、逐笔成交、逐笔委托）使用上面的纯协议接口。
 
 ## 能读写文件的那台机器
 

@@ -4,7 +4,7 @@
 
 # 通达信/同花顺纯协议接口
 
-**提供通达信/同花顺纯协议接口，支持大部分券商。接入请联系 Telegram：`JyApi888`。**
+**产品介绍见 [thsapi.com](https://thsapi.com/)。提供通达信/同花顺纯协议接口，直连券商，无需启动客户端，支持大部分券商。接入请联系 Telegram：`JyApi888`。**
 
 完整函数表和各语言示例见 [stockapi](https://github.com/jyApiZx/stockapi)。
 

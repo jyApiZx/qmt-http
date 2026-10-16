@@ -2,19 +2,15 @@
 
 大 QMT 内置策略不能读写外部文件，配置、股票池、买卖信号和日志也读不到。本仓库用 HTTP 把这些内容放到另一台机器上，策略里只保留地址和 token，不再打开本地文件。
 
-# 通达信/同花顺纯协议接口
-
-**产品介绍见 [thsapi.com](https://thsapi.com/)。提供通达信/同花顺纯协议接口，直连券商，无需启动客户端，支持大部分券商。接入请联系 Telegram：`JyApi888`。**
-
-完整函数表和各语言示例见 [stockapi](https://github.com/jyApiZx/stockapi)。
-
 调用形式与大 QMT 里常见的 HTTP 取数一致：向 `http://主机:端口/tq?token=...` 发送
 
 ```json
 {"method": "接口名", "params": {}}
 ```
 
-MiniQMT 已不可用，本仓库不依赖 xtquant。交易和 L2 行情（十档、逐笔成交、逐笔委托）使用上面的纯协议接口。
+配置、信号和日志不依赖 DLL。服务目录里放了 `thsapi.dll` 之后，才可以用下面的交易方法。没放 DLL 时，这几个方法会返回找不到文件，原来的三个方法不受影响。
+
+交易走纯协议，程序直接连券商。客户端下单慢，界面操作也容易漏单、错单。`thsapi.dll` 用来把下单、撤单和查询做准、做快。交易包：[64 位](https://github.com/jyApiZx/stockapi/releases/download/v1.0.2/thsapi_1.0.2_x64.zip)、[32 位](https://github.com/jyApiZx/stockapi/releases/download/v1.0.2/thsapi_1.0.2_x32.zip)。说明见 [stockapi](https://github.com/jyApiZx/stockapi)。先调用 `login`，再查资金和持仓。
 
 ## 能读写文件的那台机器
 
@@ -29,6 +25,12 @@ python server.py
 | `get_config` | 账号、股票池、参数 |
 | `get_signal` | 当日买卖信号 |
 | `put_log` | 把一行结果交给服务端写入 `logs/` |
+| `login` | 有 `thsapi.dll` 时登录券商 |
+| `balance` | 查资金 |
+| `positions` | 查持仓 |
+| `orders` | 查当日委托 |
+| `send_order` | 下单 |
+| `cancel_order` | 撤单 |
 
 `GET /ping?token=` 用来确认服务已经起来。token 不对或 HTTP 失败时，客户端直接抛错，策略应停止当次调仓。
 

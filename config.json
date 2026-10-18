@@ -1,0 +1,7 @@
+{
+  "account": "YOUR_ACCOUNT",
+  "stock_list": ["000001.SZ"],
+  "params": {
+    "period": "1d"
+  }
+}

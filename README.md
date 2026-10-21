@@ -1,8 +1,8 @@
 # 解除大 QMT 文件读写限制
 
-# 通达信/同花顺纯协议接口
+# 同花顺交易接口
 
-**同花顺/通达信纯协议交易接口，L1、L2 行情接口。直连券商，无需启动客户端，支持大部分券商。产品介绍见 [thsapi.com](https://thsapi.com/)。技术支持请联系 [Telegram：@Thsapi](https://t.me/Thsapi)**
+**同花顺交易接口，L1、L2 行情接口。直连券商，无需启动客户端，支持大部分券商。产品介绍见 [thsapi.com](https://thsapi.com/)。技术支持请联系 [Telegram：@Thsapi](https://t.me/Thsapi)**
 
 不点屏幕，不抢鼠标，程序直接连券商。下载后用模拟盘就能测查询、下单和撤单。已经有项目时，打开 [AI 代做提示词](https://thsapi.com/ai.html)，把提示词交给正在改项目的 AI。行情有 L1，也有十档、买卖队列和逐笔。
 
@@ -18,7 +18,7 @@
 
 配置、信号和日志不依赖 DLL。服务目录里放了 `thsapi.dll` 之后，才可以用下面的交易方法。没放 DLL 时，这几个方法会返回找不到文件，原来的三个方法不受影响。
 
-交易走纯协议，程序直接连券商。客户端下单慢，界面操作也容易漏单、错单。`thsapi.dll` 用来把下单、撤单和查询做准、做快。交易包：[64 位](https://github.com/jyApiZx/stockapi/releases/download/v1.0.3/thsapi_1.0.3_x64.zip)、[32 位](https://github.com/jyApiZx/stockapi/releases/download/v1.0.3/thsapi_1.0.3_x32.zip)。说明见 [stockapi](https://github.com/jyApiZx/stockapi)。先调用 `login`，再查资金和持仓。
+交易用同花顺交易接口，程序直接连券商。客户端下单慢，界面操作也容易漏单、错单。`thsapi.dll` 用来把下单、撤单和查询做准、做快。交易包：[64 位](https://github.com/jyApiZx/stockapi/releases/download/v1.0.5/thsapi_1.0.5_x64.zip)、[32 位](https://github.com/jyApiZx/stockapi/releases/download/v1.0.5/thsapi_1.0.5_x32.zip)。说明见 [stockapi](https://github.com/jyApiZx/stockapi)。先调用 `login`，再查资金和持仓。
 
 ## 能读写文件的那台机器
 

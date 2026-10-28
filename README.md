@@ -18,7 +18,7 @@
 
 配置、信号和日志不依赖 DLL。服务目录里放了 `thsapi.dll` 之后，才可以用下面的交易方法。没放 DLL 时，这几个方法会返回找不到文件，原来的三个方法不受影响。
 
-交易用同花顺交易接口，程序直接连券商。客户端下单慢，界面操作也容易漏单、错单。`thsapi.dll` 用来把下单、撤单和查询做准、做快。交易包：[64 位](https://github.com/jyApiZx/stockapi/releases/download/v1.0.6.1/thsapi_1.0.6.1_x64.zip)、[32 位](https://github.com/jyApiZx/stockapi/releases/download/v1.0.6.1/thsapi_1.0.6.1_x32.zip)。说明见 [stockapi](https://github.com/jyApiZx/stockapi)。先调用 `login`，再查资金和持仓。
+交易用同花顺交易接口，程序直接连券商。客户端下单慢，界面操作也容易漏单、错单。`thsapi.dll` 用来把下单、撤单和查询做准、做快。交易包：[64 位](https://github.com/jyApiZx/stockapi/releases/download/v1.0.6.2/thsapi_1.0.6.2_x64.zip)、[32 位](https://github.com/jyApiZx/stockapi/releases/download/v1.0.6.2/thsapi_1.0.6.2_x32.zip)。说明见 [stockapi](https://github.com/jyApiZx/stockapi)。先调用 `login`，再查资金和持仓。
 
 ## 能读写文件的那台机器
 
